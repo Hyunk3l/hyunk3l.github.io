@@ -1,0 +1,40 @@
+
+# Site settings
+title: Fabri Di Napoli
+email: fabri.dinapoli+website@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Fabri Di Napoli personal site.
+  
+  
+  
+baseurl: ""
+url: "http://www.fabridinapoli.com"
+
+#footer
+built-by: webjeda
+copyright:
+   name: webjeda
+   link: 'http://blog.webjeda.com'
+
+# Build settings
+markdown: kramdown
+permalink: /:title/
+paginate: 6
+paginate_path: /page:num/
+
+# Comments
+disqus-shortname: fabridinapoli-com
+
+#social
+quora: http://quora.com/sharathdt
+twitter: http://twitter.com/hyunk3l
+github: http://github.com/hyunk3l
+linkedin: https://www.linkedin.com/in/fabriziodinapoli
+
+# Sass style
+sass:
+  style: compressed
+
+# Ruby Gems
+gems: [jekyll-paginate, jekyll-seo-tag]
+
