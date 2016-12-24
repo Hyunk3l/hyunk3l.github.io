@@ -2,7 +2,7 @@
 layout: page
 title:  "About me"
 permalink: /about-me/
-img: image-2.png
+img: image-4.png
 ---
 
 About me? Just a few lines to describe myself and what I was doing during my life.
