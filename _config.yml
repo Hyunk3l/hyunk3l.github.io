@@ -4,9 +4,7 @@ title: Fabri Di Napoli
 email: fabri.dinapoli+website@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Fabri Di Napoli personal site.
-  
-  
-  
+
 baseurl: ""
 url: "http://www.fabridinapoli.com"
 
