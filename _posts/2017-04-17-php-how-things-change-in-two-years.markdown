@@ -30,30 +30,30 @@ Meanwhile, for local environment (not only) a lot of people are using Docker, th
 
 ### PSR-4 Adaptation
 First of all I needed to modernize composer.json:
-![PSR-4 in composer.json](images/posts/psr-4-directories-structure.png)
+![PSR-4 in composer.json](/images/posts/psr-4-directories-structure.png)
 Among other changes, I changed the namespace:
-![namespace adaptation](images/posts/namespace-adaptation.png)
+![namespace adaptation](/images/posts/namespace-adaptation.png)
 
 ### Scalar type hinting, return type, no more doc required
 Big changes in PHP 7.0 are the introduction of scalar type hinting and return type.
-![scalar type hinting and return type in PHP 7](images/posts/scalar-type-hinting-return-types-no-docs.png)
+![scalar type hinting and return type in PHP 7](/images/posts/scalar-type-hinting-return-types-no-docs.png)
 As you can see, I removed documentation, since method params types are specified natively!
 Furthermore, imho, method/class descriptions are useless too if the code is clean enough and names are meaningfully. So I removed them. 
 
 ### Unit Tests
 Big changes in PHPUnit too and since my code is compatible with >= 7.0 only, I started using 6.0 version.
-![PHPUnit 6 adaptation](images/posts/phpunit-6-adaptation.png)
+![PHPUnit 6 adaptation](/images/posts/phpunit-6-adaptation.png)
 and more syntax changes.
 Another change I did in my unit tests is related with the way I code.
 Test cases should reflect use cases, that's why I changed test methods names:
-![Test cases should reflect use cases](images/posts/new-way-of-uts.png)
+![Test cases should reflect use cases](/images/posts/new-way-of-uts.png)
 from `testExecuteCommand` to `shouldExecuteACommand`. This is just a silly example.
 Furthermore, as you can see, I removed a totally useless method description `Testing execute.` (what was I thinking for?!) and add a `@test` annotation
 that avoids me to put a silly `test` prefix in test method.
 
 ### Travis: no more PHP < 7.0
 A smaller change in my repo:
-![travis ci no more php smaller than seven](images/posts/travis-no-more-php-smaller-than-seven.png)
+![travis ci no more php smaller than seven](/images/posts/travis-no-more-php-smaller-than-seven.png)
 but a big one in PHP community!
 A lot of libraries/tools/frameworks are leaving behind the past and supporting only PHP >= 7.0
 
