@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using Postgres with Spring Data in a few steps"
-img: posts/scalar-type-hinting-return-types-no-docs.png
+img: posts/spring-postgresql.png
 categories: java, programming, spring, spring-data
 ---
 In this post I'm going to explain how to use Postgres in your Spring project, using JdbcTemplate, in a few steps and without doing a lot of code.
@@ -52,6 +52,7 @@ spring:
     username: postgres
     password: example
 ```
+Note: same as before, do not use silly and unencrypted passwords in prod :D
 
 ## The code
 
