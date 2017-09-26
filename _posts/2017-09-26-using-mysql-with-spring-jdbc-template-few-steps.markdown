@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Using MySQL with Spring Data in a few steps"
+title:  "Using MySQL with Spring Jdbc Template in a few steps"
 img: posts/spring-mysql.png
 categories: java, programming, spring, spring-jdbc, database, mysql
 ---
