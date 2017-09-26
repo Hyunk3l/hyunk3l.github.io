@@ -2,7 +2,7 @@
 layout: post
 title:  "Using Postgres with Spring Data in a few steps"
 img: posts/spring-postgresql.png
-categories: java, programming, spring, spring-data
+categories: java, programming, spring, spring-data, database, postgres
 ---
 In this post I'm going to explain how to use Postgres in your Spring project, using JdbcTemplate, in a few steps and without doing a lot of code.
 Spring provides us a lot of utilities, so we are not going to reinvent the wheel each time. Let's use some of them.
@@ -59,7 +59,6 @@ Note: same as before, do not use silly and unencrypted passwords in prod :D
 Add `JdbcTemplate`, autowiring it, within the configuration, here is an example:
 ```
 ...
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -68,7 +67,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 public class RepositoryConfiguration {
 
     @Bean
-    @Autowired
     public UserRepository userRepository(JdbcTemplate jdbcTemplate) {
         return new PostgresUserRepository(jdbcTemplate);
     }
