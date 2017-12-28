@@ -8,13 +8,16 @@ categories: php, docker
 This post does not pretend to be your definitive guide to how to dockerize your old PHP monolith, it’s just my own experience I'm sharing hoping to do life easier for someone else.
 
 What did I have?
+
 Local environment: a virtual machine with software installed manually.
 PHP, MariaDb, Sphinx and Redis. Each dev had it own personalization in virtual machine.
+
 Production environment: same software as local env, same minor versions, but different bugfixes.
 Big differences between envs.
 
 ## Application Configurations
 You may need to do some changes in code in order to make your monolith run in Docker containers.
+
 First of all changes, is in application configurations. Why? Because you will need to manage environment variables within a few files, instead of searching for them in the whole app.
 Is your code prepared to support multiple environments?
 If answer is no, here is a possible solution for you!
@@ -45,8 +48,12 @@ If answer is no, here is a possible solution for you!
    ```php
    $url = $config->getServiceUrl();
    ```
-## Get 
+## Software from Production
+Do you have server configurations under version control? Are you using Ansible, Puppet or Chef?
+If answer is no, get installed software versions and configurations from production environment.
+Imho is the best way to ensure your app will run, within containers, with the same software as in production.
 
-### Useful links
+
+## Useful links
 
 * [Using DotEnv (.env) in your Symfony project](http://www.oliveradria.com/dotenv-symfony-project/)
