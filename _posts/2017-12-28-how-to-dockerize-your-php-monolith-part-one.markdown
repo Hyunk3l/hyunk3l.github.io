@@ -48,6 +48,8 @@ If answer is no, here is a possible solution for you!
    ```php
    $url = $config->getServiceUrl();
    ```
+
+
 ## Software from Production
 Do you have server configurations under version control? Are you using Ansible, Puppet or Chef?
 If answer is no, get installed software versions and configurations from production environment.
