@@ -5,14 +5,15 @@ img: posts/how-to-dockerize-php-monolith.png
 categories: php, docker
 ---
 
+Welcome to the first part of **How to dockerize your old PHP monolith**.
 This post does not pretend to be your definitive guide to how to dockerize your old PHP monolith, it’s just my own experience I'm sharing hoping to do life easier for someone else.
 
-What did I have?
+# What did I have?
 
-Local environment: a virtual machine with software installed manually.
+* Local environment: a virtual machine with software installed manually.
 PHP, MariaDb, Sphinx and Redis. Each dev had it own personalization in virtual machine.
 
-Production environment: same software as local env, same minor versions, but different bugfixes.
+* Production environment: same software as local env, same minor versions, but different bugfixes.
 Big differences between envs.
 
 ## Application Configurations
