@@ -5,17 +5,20 @@ img: posts/how-to-dockerize-php-monolith.png
 categories: php, docker
 ---
 
-This post does not pretend to be your definitive guide to docker, it’s just my own experience.
-What about environments?
+This post does not pretend to be your definitive guide to how to dockerize your old PHP monolith, it’s just my own experience I'm sharing hoping to do life easier for someone else.
+
+What did I have?
 Local environment: a virtual machine with software installed manually.
-PHP 5.5, MariaDb 5.5, Sphinx and Redis. Each dev had it own personalization in virtual machine.
+PHP, MariaDb, Sphinx and Redis. Each dev had it own personalization in virtual machine.
+Production environment: same software as local env, same minor versions, but different bugfixes.
+Big differences between envs.
 
-Production environment: same software as local env, same minor versions, but different bugfixes. Big differences between configs.
+## Application Configurations
+You may need to do some changes in code in order to make your monolith run in Docker containers.
+First of all changes, is in application configurations. Why? Because you will need to manage environment variables within a few files, instead of searching for them in the whole app.
+Is your code prepared to support multiple environments?
+If answer is no, here is a possible solution for you!
 
-## Changes in code
-
-### Config
-Is your code prepared to support multiple environments? If answer is no, here is a possible solution for you.
 1. Choose a way to manage your environment variables: [DotEnv](https://symfony.com/doc/current/components/dotenv.html) with plane php or [Symfony Config](https://symfony.com/doc/current/components/config.html).
 2. In my case I chose DotEnv. Create a .env.* file for each environment, example: .env.dev, .env.pre, .env.prod
 3. Now you will need to copy all those environment-sensitive things like: urls, paths, services host, usernames etc, within the .evn files
@@ -37,12 +40,12 @@ Is your code prepared to support multiple environments? If answer is no, here is
    SERVICE_URL=http://service-pre-env-url
    ```
    
-   so your code will be simplified to something like:
+4. Start replacing hardcoded stuff or strange if else if blocks with something like:
    
    ```php
    $url = $config->getServiceUrl();
    ```
- 
+## Get 
 
 ### Useful links
 
