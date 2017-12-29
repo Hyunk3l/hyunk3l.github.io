@@ -24,7 +24,7 @@ paginate_path: /page:num/
 disqus-shortname: fabridinapoli-com
 
 #social
-twitter: http://twitter.com/hyunk3l
+twitter_url: http://twitter.com/hyunk3l
 github: http://github.com/hyunk3l
 linkedin: https://www.linkedin.com/in/fabriziodinapoli
 
