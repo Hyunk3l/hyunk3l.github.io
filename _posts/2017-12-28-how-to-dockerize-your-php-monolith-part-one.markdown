@@ -56,6 +56,8 @@ Do you have server configurations under version control? Are you using Ansible, 
 If answer is no, get installed software versions and configurations from production environment.
 Imho is the best way to ensure your app will run, within containers, with the same software as in production.
 
+## Part two
+Next part will be about how to create docker containers and conclusion.
 
 ## Useful links
 
