@@ -24,10 +24,13 @@ paginate_path: /page:num/
 disqus-shortname: fabridinapoli-com
 
 #social
-quora: http://quora.com/sharathdt
 twitter: http://twitter.com/hyunk3l
 github: http://github.com/hyunk3l
 linkedin: https://www.linkedin.com/in/fabriziodinapoli
+
+# SEO
+twitter:
+  username: hyunk3l
 
 # Sass style
 sass:
