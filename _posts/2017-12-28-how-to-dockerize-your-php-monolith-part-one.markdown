@@ -4,6 +4,7 @@ title:  "How to dockerize your old PHP monolith - part one"
 img: posts/how-to-dockerize-php-monolith.png
 image: posts/how-to-dockerize-php-monolith.png
 categories: php, docker
+tags: [php, docker, dockerize, monolith, dotenv, symfony]
 ---
 
 Welcome to the first part of **How to dockerize your old PHP monolith**.
