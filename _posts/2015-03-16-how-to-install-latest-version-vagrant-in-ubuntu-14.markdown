@@ -2,7 +2,7 @@
 layout: post
 title:  "How to install latest version of Vagrant in Ubuntu 14"
 img: posts/vagrant.jpg
-categories: devops
+categories: [devops]
 tags: [vagrant, ubuntu]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Using Postgres with Spring Jdbc Template in a few steps"
 img: posts/spring-postgresql.png
-categories: java, programming, spring, spring-jdbc, database, postgres
+categories: [java, programming, spring, spring-jdbc, database, postgres]
 tags: [java, programming, spring, database, sql, postgres, jdbc, docker]
 ---
 In this post I'm going to explain how to use Postgres in your Spring project, using JdbcTemplate, in a few steps and without doing a lot of code.

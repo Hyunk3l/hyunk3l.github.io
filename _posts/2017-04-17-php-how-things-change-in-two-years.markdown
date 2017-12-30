@@ -2,7 +2,7 @@
 layout: post
 title:  "PHP: how things change in two years"
 img: posts/scalar-type-hinting-return-types-no-docs.png
-categories: php, programming
+categories: [php, programming]
 tags: [design patterns, ood, php, code, programming]]
 ---
 

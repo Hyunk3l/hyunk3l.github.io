@@ -2,7 +2,7 @@
 layout: post
 title:  "NamedParametersJdbcTemplate: JdbcTemplate prepared statement with named params"
 img: posts/spring-namedparameterjdbctemplate.png
-categories: java, jdbctemplate, database
+categories: [java, jdbctemplate, database]
 tags: [java, programming, spring, database, sql, postgres, jdbctemplate, docker]
 ---
 

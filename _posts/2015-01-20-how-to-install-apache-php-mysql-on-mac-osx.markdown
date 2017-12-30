@@ -2,7 +2,7 @@
 layout: post
 title:  "How to install Apache PHP and MySQL on Mac OS"
 img: posts/OS_X_Yosemite_Desktop.png
-categories: php, programming
+categories: [php, programming]
 tags: [php, programming, apache, mysql, macos, macbook, virtualbox]
 ---
 
