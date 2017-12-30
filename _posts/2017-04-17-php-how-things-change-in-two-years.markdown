@@ -4,7 +4,7 @@ title:  "PHP: how things change in two years"
 img: posts/scalar-type-hinting-return-types-no-docs.png
 image: posts/scalar-type-hinting-return-types-no-docs.png
 categories: [php, programming]
-tags: [design patterns, ood, php, code, programming]]
+tags: [design patterns, ood, php, code, programming]
 ---
 
 More than two years ago I started my own [PHP Design Pattern](https://github.com/Hyunk3l/php-design-patterns) repository with code examples.
