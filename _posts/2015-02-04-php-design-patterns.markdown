@@ -2,6 +2,7 @@
 layout: post
 title:  "PHP Design Patterns"
 img: posts/php-design-patterns.png
+image: posts/php-design-patterns.png
 categories: [php, programming, design patterns]
 tags: [design patterns, ood, php, code]
 ---

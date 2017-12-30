@@ -2,6 +2,7 @@
 layout: post
 title:  "Using Postgres with Spring Jdbc Template in a few steps"
 img: posts/spring-postgresql.png
+image: posts/spring-postgresql.png
 categories: [java, programming, spring, spring-jdbc, database, postgres]
 tags: [java, programming, spring, database, sql, postgres, jdbc, docker]
 ---

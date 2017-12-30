@@ -2,6 +2,7 @@
 layout: post
 title:  "JShell: using Java 9 interactive console"
 img: posts/jshell-java-9-repl-interactive-console.png
+image: posts/jshell-java-9-repl-interactive-console.png
 categories: [java, programming, repl]
 tags: [java, jshell, console, java9]
 ---

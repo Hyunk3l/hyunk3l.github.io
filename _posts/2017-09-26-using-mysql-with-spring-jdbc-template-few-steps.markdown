@@ -2,6 +2,7 @@
 layout: post
 title:  "Using MySQL with Spring Jdbc Template in a few steps"
 img: posts/spring-mysql.png
+image: posts/spring-mysql.png
 categories: [java, programming, spring, spring-jdbc, database, mysql]
 tags: [java, programming, spring, database, sql, mysql, jdbc, docker]
 ---
