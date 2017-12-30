@@ -2,7 +2,8 @@
 layout: post
 title:  "PHP Design Patterns"
 img: posts/php-design-patterns.png
-categories: php, programming
+categories: php, programming, design patterns
+tags: [design patterns, ood, php, code]
 ---
 
 ### Just another example of Design Patterns in PHP.

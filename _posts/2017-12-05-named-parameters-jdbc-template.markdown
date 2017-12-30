@@ -3,6 +3,7 @@ layout: post
 title:  "NamedParametersJdbcTemplate: JdbcTemplate prepared statement with named params"
 img: posts/spring-namedparameterjdbctemplate.png
 categories: java, jdbctemplate, database
+tags: [java, programming, spring, database, sql, postgres, jdbctemplate, docker]
 ---
 
 When you start with Spring JdbcTemplate, and need to pass parameters to the prepared statement,

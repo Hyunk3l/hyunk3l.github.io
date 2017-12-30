@@ -3,6 +3,7 @@ layout: post
 title:  "How to install Apache PHP and MySQL on Mac OS"
 img: posts/OS_X_Yosemite_Desktop.png
 categories: php, programming
+tags: [php, programming, apache, mysql, macos, macbook, virtualbox]
 ---
 
 Need to get working your own local web server in your Mac? If you have Maverics or Yosemite, you can follow this guide!

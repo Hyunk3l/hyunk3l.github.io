@@ -3,13 +3,14 @@ layout: post
 title:  "JShell: using Java 9 interactive console"
 img: posts/jshell-java-9-repl-interactive-console.png
 categories: java, programming, repl
+tags: [java, jshell, console, java9]
 ---
 
 One of the nice news of Java 9 is the introduction of a REPL (Read-Eval-Print-Loop): `JShell`
 Let's take a look at how to use it.
 
 ## Running JShell
-If you have the latest version of the JDF installed just run `/bin/jshell`.
+If you have the latest version of the JDK installed just run `/bin/jshell`.
 
 ## Running with Docker
 If you don't have Java 9 installed, you can run it using Docker:
