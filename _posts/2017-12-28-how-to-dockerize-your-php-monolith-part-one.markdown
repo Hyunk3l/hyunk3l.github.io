@@ -59,7 +59,7 @@ If answer is no, get installed software versions and configurations from product
 Imho is the best way to ensure your app will run, within containers, with the same software as in production.
 
 ## Part two
-Next part will be about how to create docker containers and conclusion.
+Next part will be about how to create dockerize Nginx: [http://www.fabridinapoli.com/how-to-dockerize-your-php-monolith-part-two-nginx/]()
 
 ## Useful links
 
