@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to dockerize your old PHP monolith - part two: Nginx and PHP"
+title:  "How to dockerize your old PHP monolith - part two: Nginx"
 img: posts/how-to-dockerize-php-monolith-part-two.png
 image: posts/how-to-dockerize-php-monolith-part-two.png
 categories: [php, docker]
@@ -8,12 +8,11 @@ tags: [php, docker, dockerize, monolith, dotenv, symfony, nginx]
 ---
 
 First post of 2018 and the second part of "How to dockerize your old PHP monolith".
-Finally I decided to break down the post in more than two entries. So in this post we are going to see how to dockerize Nginx and PHP.
+Finally I decided to break down the post in more than two entries. So in this post we are going to see how to dockerize Nginx.
 *Remember:* this post does not pretend to be your definitive guide to how to dockerize your old PHP monolith, it’s just my own experience I'm sharing, hoping to do life easier for someone else.
 
 ## Overview
-We are going to create a basic dockerized version of your monolith, using Docker and Docker Compose.
-Normally
+We are going to create a basic dockerized version of your monolith, using Docker and [Docker Compose](https://docs.docker.com/compose/overview/).
 
 ## Dockerize
  
@@ -25,6 +24,19 @@ docker
 ├── php
 ├── redis
 └── sphinx
+```
+
+Now create a `docker-compose.yml` in your project root dir, with this content:
+```
+version: '3'
+
+services:
+  nginx:
+    build:
+      context: ./
+      dockerfile: ./docker/nginx/Dockerfile
+    ports:
+      - 80:80
 ```
 
 ### How to choose the right docker image
@@ -51,19 +63,18 @@ Status: Downloaded newer image for nginx:1.8
  ---> 0d493297b409
 Successfully built 0d493297b409
 ```
-This is *NOT RECOMMENDED*
+This is **NOT RECOMMENDED** because the tag is not in tags list.
+Alternatively, you can go to [Nginx Docker Github Repo](https://github.com/nginxinc/docker-nginx), search for the version you need within the "tags"
+section and take a look at Dockerfile, in order to take a cue to build your own image. 
 
-we are going to create a `Dockerfile` within the `docker/nginx/` directory.
+So, the version choosed is `1.13-alpine`, let's create a `Dockerfile` within the `docker/nginx/` directory, with this content:
+```
+FROM nginx:1.13-alpine
+```
+
+Give it a try: `docker-compose up --build`, open `http://localhost/` in your browser and you should get the Nginx welcome page.
 
 
+## Part three
+Next part will be about how to create a PHP container and use it with Nginx.
 
-### PHP
-Since we're using Nginx, we are 
-
-### MariaDb
-
-### Sphinx
-
-### Redis
-
-## Conclusions
