@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Fabri Di Napoli personal site.
 
 baseurl: ""
-url: "http://www.fabridinapoli.com"
+url: "https://www.fabridinapoli.com"
 
 #footer
 built-by: webjeda

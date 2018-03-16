@@ -6,7 +6,7 @@ image: posts/spring-mysql.png
 categories: [java, programming, spring, spring-jdbc, database, mysql]
 tags: [java, programming, spring, database, sql, mysql, jdbc, docker]
 ---
-After this big unsuccess of [this post about "Using Postgres with Spring Jdbc Template in a few steps"](http://www.fabridinapoli.com/using-postgres-with-spring-jdbc-template-few-steps/) I'm going to make another post but this time using MySQL.
+After this big unsuccess of [this post about "Using Postgres with Spring Jdbc Template in a few steps"](https://www.fabridinapoli.com/using-postgres-with-spring-jdbc-template-few-steps/) I'm going to make another post but this time using MySQL.
 Let's start!
 
 ## The docker-compose.yml file
