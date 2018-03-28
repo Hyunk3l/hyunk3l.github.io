@@ -38,9 +38,9 @@ This will build Redis container with your redis.conf.
 Here is the final structure of `docker/redis` directory:
 ```shell
 docker/redis
-??? Dockerfile
-??? conf
-    ??? redis.conf
+├── Dockerfile
+└── conf
+    └── redis.conf
 ```
 
 ### Redis + Docker Compose
@@ -107,3 +107,57 @@ hostname available within the network.
 The script sets a variable in Redis, gets it back and finally print it with a `var_dump`.
 If it's all right, if you go to: [http://your-great-monolith.com/](http://your-great-monolith.com/)
 you should see this: `string(3) "bar"`
+
+## Sphinx
+Easy enough for the rest of the containers, but Sphinx is an hard-ass.
+There is no Docker Hub Sphinx official image but there are some alternatives:
+ - Use a "homemade" image, like [this one](https://hub.docker.com/r/centurylink/sphinx/)
+ - Build your own image from scratch
+ 
+First option is more comfortable imo, so I'll use it, but depending on your monolith, you could need to build it from scratch.
+Let's create a `conf` directory in `docker/sphinx` and add a `sphinx.conf` inside of it.
+We will need this file to add our indexes.
+Now create a `Dockerfile` in `docker/sphinx` with this content:
+```
+FROM centurylink/sphinx:2.1.9.02
+
+COPY ./docker/sphinx/conf/sphinx.conf /usr/local/etc/sphinx.conf
+```
+
+and add following lines to the `docker-compose.yml` file:
+```
+  sphinx:
+    build:
+      context: ./
+      dockerfile: ./docker/sphinx/Dockerfile
+    ports:
+      - 9306:9306
+```
+
+Now run `docker-compose up --build`.
+
+You will see something like:
+ ```shell
+ sphinx_1  | Sphinx 2.1.9-id64-release (rel21-r4761)
+ sphinx_1  | Copyright (c) 2001-2014, Andrew Aksyonoff
+ sphinx_1  | Copyright (c) 2008-2014, Sphinx Technologies Inc (http://sphinxsearch.com)
+ sphinx_1  | 
+ sphinx_1  | using config file '/usr/local/etc/sphinx.conf'...
+ sphinx_1  | FATAL: no indexes found in config file '/usr/local/etc/sphinx.conf'
+ ```
+ 
+Don't worry, it's all right! Since we have no indexes defined in `sphinx.conf`, Sphinx starts up and exits with code 1.
+We are going to create indexes in the next part of this tutorial, when we will create a database.
+
+Finally, this should be the structure of `docker/sphinx`:
+```shell
+docker/sphinx
+├── Dockerfile
+└── conf
+    └── sphinx.conf
+```
+
+## Part five
+In the fifth and probably the last part, we will build our last container: MariaDb!
+Furthermore, we will connect Sphinx container with MariaDb, in order to have data available in our search engine.
+Stay tuned!
