@@ -5,6 +5,8 @@ img: posts/spring-namedparameterjdbctemplate.png
 image: posts/spring-namedparameterjdbctemplate.png
 categories: [java, jdbctemplate, database]
 tags: [java, programming, spring, database, sql, postgres, jdbctemplate, docker]
+redirect_to:
+  - https://fabridinapoli.medium.com/namedparametersjdbctemplate-jdbctemplate-prepared-statement-with-named-params-21fd83a7bf5f
 ---
 
 When you start with Spring JdbcTemplate, and need to pass parameters to the prepared statement,
